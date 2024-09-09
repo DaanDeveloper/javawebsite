@@ -1,0 +1,43 @@
+<!-- Daan Borghs r0986005 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+    <title>Clients list | DaanStore</title>
+</head>
+<body>
+<header>
+    <div class="websiteName">
+        <h1>DaanStore</h1>
+    </div>
+    <div class="title">
+        <h1>Clients</h1>
+    </div>
+</header>
+<article class="listClients">
+    <div>
+        <h1>Our clients:</h1>
+        <ol>
+            <li th:each="client, stat : ${clients}">
+                <a th:href="@{/client-details(clientId=${stat.index})}"><span th:text="${client.firstName} + ' ' + ${client.surName}"></span></a>
+                <ul>
+                    <li th:text="'Year of birth: ' + ${client.yearOfBirth}"></li>
+                    <li th:text="'Year of birth: ' + ${client.contactPerson.firstName} + ' ' + ${client.contactPerson.surName}"></li>
+                    <li th:text="'Card number: ' + ${client.cardNumber}"></li>
+                    <li>Shopping list:
+                        <ul>
+                            <li class="li-spacing" th:each="item : ${client.shoppingList}" th:text="${item}"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</article>
+<footer>
+    <p>Developed by Daan Borghs</p>
+    <a href="/">Back to home page</a>
+</footer>
+</body>
+</html>

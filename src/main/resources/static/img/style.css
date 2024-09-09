@@ -1,0 +1,271 @@
+/*add a self-selected stylesheet here*/
+/* Daan Borghs r0986005 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+article {
+    height: 100%;
+}
+
+header {
+    width: 100%;
+}
+
+.mb-1 {
+    margin-top: 210px!important;
+}
+
+.mb-2 {
+    margin-top: 220px!important;
+}
+
+.mb-3 {
+    margin-top: 230px!important;
+}
+
+.mb-4 {
+    margin-top: 240px!important;
+}
+
+.mb-5 {
+    margin-top: 250px!important;
+}
+
+.mb-6 {
+    margin-top: 260px!important;
+}
+
+.mb-7 {
+    margin-top: 270px!important;
+}
+
+.mb-8 {
+    margin-top: 280px!important;
+}
+
+.mb-9 {
+    margin-top: 295px!important;
+}
+
+.mb-18 {
+    margin-top: 380px!important;
+}
+
+.mb-22 {
+    margin-top: 420px;
+}
+
+.mb-35 {
+    margin-top: 550px;
+}
+
+footer {
+    margin-top: 200px;
+    height: 100px;
+    background: #001128;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 30px;
+}
+
+footer a {
+    color: white;
+}
+
+header .websiteName {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+header .title {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    color: white;
+    background: #001128;
+    padding-left: 30px;
+}
+
+.home-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.home-a {
+    margin-bottom: 30px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-a a {
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border: black solid 1px;
+    text-decoration: none;
+}
+
+.home-article input {
+    width: 250px!important;
+}
+
+.home-article form {
+    margin: 0 auto!important;
+}
+
+form {
+    margin: 120px auto;
+    width: 400px;
+}
+
+.home footer {
+    margin-top: 100px!important;
+}
+
+input[type="text"], select {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%
+}
+
+input[type="checkbox"] {
+    margin: 0 0 5px 10px;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="submit"] {
+    font-weight: 600;
+    background-color: #ffffff;
+    color: black;
+    border: solid 1px black;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #d2d2d2;
+}
+
+.clientDetails {
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 190px;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center h1 {
+    margin: 80px 0 30px;
+}
+
+.li-spacing {
+    margin-bottom: 10px;
+}
+
+.listClients {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.listClients h1 {
+    margin-bottom: 30px;
+}
+
+.listClients ol {
+    padding-left: 20px;
+}
+
+.listClients ol > li > ul {
+    padding-left: 20px;
+}
+
+.listClients ul ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.listClients li span {
+    font-weight: bold;
+}
+
+.newSection footer {
+    margin-top: 170px!important;
+}
+
+article.section ol {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article.section li {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(65, 64, 64, 0.3);
+}
+
+article.section li p:nth-child(1) {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+article.section li p:nth-child(2) {
+    margin-bottom: 13px;
+}
+
+article.section-details {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+}
+
+.clientDetails div {
+    width: 400px;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(65, 64, 64, 0.3);
+}
+
+.clientDetails div p, .clientDetails div h1 {
+    margin-bottom: 13px;
+}
+
+.clientDetails div h1 {
+    text-align: center;
+}

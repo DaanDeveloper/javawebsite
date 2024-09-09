@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Stores List | DaanStore</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+<header>
+    <div class="websiteName">
+        <h1>DaanStore</h1>
+    </div>
+    <div class="title">
+        <h1>Stores</h1>
+    </div>
+</header>
+<article class="center">
+    <h1>Our stores:</h1>
+    <ul>
+        <li class="li-spacing" th:each="store, stat : ${stores}">
+            <a th:href="@{/sectionDetails(storeId=${stat.index})}" th:text="${store.name + ' (' + store.sectionList.size() + ')'}"></a>
+        </li>
+    </ul>
+</article>
+<footer class="mb-35">
+    <p>Developed by Daan Borghs</p>
+    <a href="/">Back to home page</a>
+</footer>
+</body>
+</html>
