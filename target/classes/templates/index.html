@@ -1,0 +1,44 @@
+<!-- Daan Borghs r0986005 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Homepage | DaanStore</title>
+</head>
+<body class="home">
+    <header>
+        <div class="websiteName">
+            <h1>DaanStore</h1>
+        </div>
+        <div class="title">
+            <h1>Home</h1>
+        </div>
+    </header>
+    <article class="home-article">
+        <div class="home-a">
+            <p>Create a new:</p>
+            <a href="/new-client">New Client</a>
+            <a href="/new-employee">New Employee</a>
+            <a href="/new-store">New Store</a>
+            <a href="/new-section">New Section</a>
+        </div>
+        <div class="home-a">
+            <p>List of:</p>
+            <a href="/employees">Employees</a>
+            <a href="/clients">Clients</a>
+            <a href="/stores">Stores</a>
+        </div>
+        <div class="home-a">
+            <form action="/search-section" method="get">
+                <label for="sectionName">Search for a section:</label>
+                <input id="sectionName" type="text" name="sectionName" placeholder="Enter section name" required>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </article>
+    <footer>
+        <p>Developed by Daan Borghs</p>
+    </footer>
+</body>
+</html>

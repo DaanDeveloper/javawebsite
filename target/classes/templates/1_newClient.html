@@ -1,0 +1,58 @@
+<!-- Daan Borghs r0986005 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>New Client | DaanStore</title>
+</head>
+<body>
+<header>
+    <div class="websiteName">
+        <h1>DaanStore</h1>
+    </div>
+    <div class="title">
+        <h1>New Client</h1>
+    </div>
+</header>
+<article>
+    <form action="/create-client" method="get">
+        <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </p>
+        <p>
+            <label for="surName">Surname:</label>
+            <input type="text" id="surName" name="surName" required>
+        </p>
+        <p>
+            <label for="yearOfBirth">Year of Birth:</label>
+            <input type="text" id="yearOfBirth" name="yearOfBirth" required>
+        </p>
+        <p>Select Store:</p>
+        <div th:each="store, storeStat : ${stores}">
+            <label th:for="${'store' + storeStat.index}" th:text="${store.name}"></label><br>
+            <input type="radio" th:id="${'store' + storeStat.index}" th:name="storeId" th:value="${storeStat.index}" th:checked="${storeStat.index == 0}">
+        </div>
+        <p>
+            <label for="weeklyVisits">Expected weekly visits to the store:</label>
+            <input id="weeklyVisits" type="text" name="weeklyVisits" required>
+        </p>
+        <p>
+            <label for="contactPerson">Who will be contact person?</label>
+            <select id="contactPerson" name="employeeId">
+                <option value="-1">Who will be contact person?</option>
+                <option th:each="employee : ${employees}" th:value="${employeeStat.index}" th:text="${employee.firstName + ' ' + employee.surName}"></option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Continue and generate card number">
+        </p>
+    </form>
+</article>
+<footer class="mb-7">
+    <p>Developed by Daan Borghs</p>
+    <a href="/">Back to home page</a>
+</footer>
+</body>
+</html>

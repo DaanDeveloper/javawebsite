@@ -1,0 +1,33 @@
+<!-- Daan Borghs r0986005 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Client Details | DaanStore</title>
+</head>
+<body>
+<header>
+    <div class="websiteName">
+        <h1>DaanStore</h1>
+    </div>
+    <div class="title">
+        <h1>Sections</h1>
+    </div>
+</header>
+<article class="center section">
+    <h1 th:text="'Sections of ' + ${storeName}"></h1>
+    <ol class="d-flex">
+        <li th:each="section : ${sections}">
+            <p th:text="${section.name} + ' - ' + ${section.cooled ? 'Cooled section' : 'Not cooled'}"></p>
+            <p th:text="'Responsible: ' + ${section.responsible.firstName} + ' ' + ${section.responsible.surName}"></p>
+            <img onerror="this.src='img/noimage.jpg'" th:src="@{${section.picture}}" alt="Section Image"/>
+        </li>
+    </ol>
+</article>
+<footer class="mb-18">
+    <p>Developed by Daan Borghs</p>
+    <a href="/">Back to home page</a>
+</footer>
+</body>
+</html>

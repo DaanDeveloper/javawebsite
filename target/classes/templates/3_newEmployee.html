@@ -1,0 +1,46 @@
+<!-- Daan Borghs r0986005 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>New Employee | DaanStore</title>
+</head>
+<body>
+<header>
+    <div class="websiteName">
+        <h1>DaanStore</h1>
+    </div>
+    <div class="title">
+        <h1>New Employee</h1>
+    </div>
+</header>
+<article>
+    <form action="/create-employee" method="get">
+        <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </p>
+        <p>
+            <label for="surName">Surname:</label>
+            <input type="text" id="surName" name="surName" required>
+        </p>
+        <p>
+            <label for="startDate">Start Date (dd/mm/yyyy):</label>
+            <input type="text" id="startDate" name="startDate" required>
+        </p>
+        <p class="d-flex flex-row">
+            <label for="jobStudent">Job Student:</label>
+            <input type="checkbox" id="jobStudent" name="jobStudent">
+        </p>
+        <p>
+            <input type="submit" value="Continue">
+        </p>
+    </form>
+</article>
+<footer class="mb-18">
+    <p>Developed by Daan Borghs</p>
+    <a href="/">Back to home page</a>
+</footer>
+</body>
+</html>

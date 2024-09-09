@@ -1,0 +1,56 @@
+<!-- Daan Borghs r0986005 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>New Section | DaanStore</title>
+        <link rel="stylesheet" type="text/css" href="img/style.css" />
+    </head>
+    <body class="newSection">
+        <header>
+            <div class="websiteName">
+                <h1>DaanStore</h1>
+            </div>
+            <div class="title">
+                <h1>Create New Section</h1>
+            </div>
+        </header>
+        <article class="center">
+            <form action="/create-section" method="get">
+                <p>
+                    <label for="sectionName">Name section:</label>
+                    <input type="text" id="sectionName" name="sectionName" required>
+                </p>
+                <p>
+                    <label for="picture">Picture:</label>
+                    <input type="text" id="picture" name="picture" required>
+                </p>
+                <p class="d-flex flex-row">
+                    <label for="cooled">Cooled?</label>
+                    <input type="checkbox" id="cooled" name="cooled">
+                </p>
+                <p>
+                    <label for="store">In which store?</label>
+                    <select id="store" name="storeId">
+                        <option value="-1">In which store?</option>
+                        <option th:each="store : ${stores}" th:value="${storeStat.index}" th:text="${store.name}"></option>
+                    </select>
+                </p>
+                <p>
+                    <label for="responsible">Who is responsible for this section?</label>
+                    <select id="responsible" name="employeeId">
+                        <option value="-1">Who is responsible for this section?</option>
+                        <option th:each="employee : ${employees}" th:value="${employeeStat.index}" th:text="${employee.firstName + ' ' + employee.surName}"></option>
+                    </select>
+                </p>
+                <p>
+                    <input type="submit" value="Confirm section">
+                </p>
+            </form>
+        </article>
+        <footer>
+            <p>Developed by Daan Borghs</p>
+            <a href="/">Back to home page</a>
+        </footer>
+    </body>
+</html>
